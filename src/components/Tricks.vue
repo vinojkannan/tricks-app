@@ -94,7 +94,7 @@
 
           <template v-slot:footer>
             <v-row class="mt-2 mx-2" align="center" justify="center">
-              <span class="grey--text">Items per page</span>
+              <span class="grey--text">Per page</span>
               <v-menu offset-y>
                 <template v-slot:activator="{ on }">
                   <v-btn dark text color="primary" class="ml-2" v-on="on">
@@ -113,15 +113,14 @@
                 </v-list>
               </v-menu>
 
-              <v-spacer></v-spacer>
 
               <span class="mr-4 grey--text"
-                >Page {{ page }} of {{ numberOfPages }}</span
+                >{{ page }} of {{ numberOfPages }}</span
               >
-              <v-btn fab dark color="primary" class="mr-1" @click="formerPage">
+              <v-btn icon color="primary" @click="formerPage">
                 <v-icon>mdi-chevron-left</v-icon>
               </v-btn>
-              <v-btn fab dark color="primary" class="ml-1" @click="nextPage">
+              <v-btn icon color="primary" @click="nextPage">
                 <v-icon>mdi-chevron-right</v-icon>
               </v-btn>
             </v-row>
@@ -157,14 +156,6 @@ export default {
       sortBy: "name",
       keys: ["Title", "Content"],
       items: [
-        {
-          title: "Frozen Yogurt",
-          content: "super"
-        },
-        {
-          title: "Ice cream sandwich",
-          content: 237
-        }
       ],
       selected: "",
       mode: ""
