@@ -1,5 +1,6 @@
 import axios from "axios";
 import { SERVER_URL } from "../../config";
+require('dotenv').config()
 
 const url = process.env.SERVER_URL || SERVER_URL;
 
