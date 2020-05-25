@@ -1,13 +1,17 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png" />
+    <tricks></tricks>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
+import Tricks from "@/components/Tricks";
 
 export default {
-  name: "Home"
+  name: "Home",
+  components: {
+    Tricks
+  }
 };
 </script>
