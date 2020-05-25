@@ -20,5 +20,5 @@ export const editTrick = trick => {
 };
 
 export const deleteTrick = trickId => {
-  return axios.delete(url + "/trick/" + trickId);
+  return axios.delete(SERVER_URL + "/trick/" + trickId);
 };
