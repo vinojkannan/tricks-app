@@ -1,23 +1,22 @@
 import axios from "axios";
 import { SERVER_URL } from "../../config";
-require('dotenv').config()
 
-const url = process.env.SERVER_URL || SERVER_URL;
 
 export const getTricks = () => {
-  return axios.get(url + "/tricks");
+  console.log('process env', process.env)
+  return axios.get(SERVER_URL + "/tricks");
 };
 
 export const getTrick = trickId => {
-  return axios.get(url + "/trick/" + trickId);
+  return axios.get(SERVER_URL + "/trick/" + trickId);
 };
 
 export const addTrick = trick => {
-  return axios.post(url + "/tricks", trick);
+  return axios.post(SERVER_URL + "/tricks", trick);
 };
 
 export const editTrick = trick => {
-  return axios.put(url + `/trick/${trick.id}`, trick);
+  return axios.put(SERVER_URL + `/trick/${trick.id}`, trick);
 };
 
 export const deleteTrick = trickId => {
